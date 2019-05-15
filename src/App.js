@@ -10,7 +10,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <FoodBox food={foods[2]} />
+        {
+          foods.map( (oneFood, index) => {
+            return (
+              <FoodBox food={foods[index]} />
+            );
+          })
+        }
       </div>
     );
   }
